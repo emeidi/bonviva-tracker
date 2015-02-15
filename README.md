@@ -3,9 +3,9 @@ A set of scripts to mirror and parse the items in the Credit Suisse Bonviva Rewa
 
 How To
 ======
-# Download this repository to a dedicated folder on your computer which is writeable for your user
-# Run `./mirror.sh`. A mirror of the rewards item pages is stored in `./cache/%ID%/%TODAY%.html`. This might take some time, depending on the speed of your Internet connection.
-# Run `./parse.py`
+1. Download this repository to a dedicated folder on your computer which is writeable for your user
+1. Run `./mirror.sh`. A mirror of the rewards item pages is stored in `./cache/%ID%/%TODAY%.html`. This might take some time, depending on the speed of your Internet connection.
+1. Run `./parse.py`
 
 You now should find `./cache/YYYY-MM-DD.json` which contains a structured list all items for sale in the Credit Suisse Bonviva Rewards Shop. You can use this file to perform further analysis.
 
