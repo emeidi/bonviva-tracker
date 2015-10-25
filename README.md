@@ -13,53 +13,62 @@ Example
 =======
 I was curious about which cash voucher offered in the shop gives you the most bang for the buck. I therefore wrote the script `find-vouchers.py` to find cash vouchers (as signalled by "CHF [0-9]+" in the description) and to calculate how much 1,000 Bonviva Reward Points are worth in CHF for any given voucher.
 
-This is the result as of 2015-02-15:
+This is the result as of 2015-10-24:
 
-    Hotelcard im Wert von CHF 95 ............................................... 7.62
-    CeDe.ch Geschenkkarte im Wert von CHF 30 ................................... 7.50
-    FLEUROP Geschenkkarte im Wert von CHF 50 ................................... 7.50
-    FLEUROP Geschenkkarte im Wert von CHF 100 .................................. 7.50
-    ATHLETICUM Geschenkkarte im Wert von CHF 50 ................................ 7.50
-    ATHLETICUM Geschenkkarte im Wert von CHF 100 ............................... 7.50
-    MrLens Gutschein im Wert von CHF 20 ........................................ 7.49
-    FLEUROP Geschenkkarte im Wert von CHF 25 ................................... 7.49
-    SHUI TANG Jahresabo im Wert von CHF 300 (Gutschein) ........................ 7.06
-    VICTORIA-JUNGFRAU COLLECTION Wertgutschein von CHF 100 ..................... 7.06
-    SHUI TANG Gutschein im Wert von CHF 100 .................................... 7.06
-    NAVYBOOT Gutschein im Wert von CHF 100 ..................................... 7.06
-    NAVYBOOT Gutschein im Wert von CHF 200 ..................................... 7.06
-    SHUI TANG Gutschein im Wert von CHF 50 ..................................... 7.05
-    NAVYBOOT Gutschein im Wert von CHF 50 ...................................... 7.05
-    TheBungalow.ch Gutschein im Wert von CHF 100 ............................... 7.04
-    JEANS.CH Gutschein im Wert von CHF 200 ..................................... 6.76
-    SHIRTERY.CH Gutschein im Wert von CHF 200 .................................. 6.76
-    TICKETCORNER Ski-Geschenkbox im Wert von CHF 100 ........................... 6.67
-    TheBungalow.ch Gutschein im Wert von CHF 50 ................................ 6.67
-    JEANS.CH Gutschein im Wert von CHF 100 ..................................... 6.58
-    SHIRTERY.CH Gutschein im Wert von CHF 100 .................................. 6.58
-    SWISS.HOLIDAYCARD Geschenkkarte im Wert von CHF 299 ........................ 6.38
-    THE BODY SHOP Geschenkkarte im Wert von CHF 50 ............................. 6.38
-    iTUNES Geschenkkarte im Wert von CHF 100 ................................... 6.35
-    JELMOLI Geschenkkarte im Wert von CHF 50 ................................... 6.35
-    LA REDOUTE Geschenkkarte im Wert von CHF 50 ................................ 6.35
-    HOTELPLAN Geschenkkarte im Wert von CHF 50 ................................. 6.35
-    BELDONA Geschenkkarte im Wert von CHF 50 ................................... 6.35
-    STARBUCKS Geschenkkarte im Wert von CHF 50 ................................. 6.35
-    BLACKOUT Geschenkkarte im Wert von CHF 50 .................................. 6.35
-    iTUNES Geschenkkarte im Wert von CHF 50 .................................... 6.35
-    GIDOR COIFFURE Geschenkkarte im Wert von CHF 100 ........................... 6.33
-    ORELL FÜSSLI Geschenkkarte im Wert von CHF 50 .............................. 6.31
-    ORELL FÜSSLI Geschenkkarte im Wert von CHF 20 .............................. 6.31
-    JEANS.CH Gutschein im Wert von CHF 50 ...................................... 6.26
-    SHIRTERY.CH Gutschein im Wert von CHF 50 ................................... 6.26
-    TICKETCORNER Geschenkkarte im Wert von CHF 100 ............................. 6.18
-    IKEA Geschenkkarte im Wert von CHF 50 ...................................... 6.18
-    TICKETCORNER Geschenkkarte im Wert von CHF 50 .............................. 6.18
-    TICKETCORNER Geschenkkarte im Wert von CHF 25 .............................. 6.17
-    GIDOR COIFFURE Geschenkkarte im Wert von CHF 50 ............................ 6.02
-    TICKETCORNER Ski-Geschenkbox im Wert von CHF 50 ............................ 6.00
-    TheBungalow.ch Gutschein im Wert von CHF 20 ................................ 5.71
-    GIDOR COIFFURE Geschenkkarte im Wert von CHF 20 ............................ 5.26
+	[4019] Hotelcard im Wert von CHF 95 ........................... 7.62
+	[1078] CeDe.ch Geschenkkarte im Wert von CHF 30 ............... 7.50
+	[1269] FLEUROP Geschenkkarte im Wert von CHF 50 ............... 7.50
+	[1270] FLEUROP Geschenkkarte im Wert von CHF 100 .............. 7.50
+	[1507] ATHLETICUM Geschenkkarte im Wert von CHF 50 ............ 7.50
+	[1508] ATHLETICUM Geschenkkarte im Wert von CHF 100 ........... 7.50
+	[4255] MAGANDO.ch Geschenkkarte im Wert von CHF 50 ............ 7.50
+	[4257] MAGANDO.ch Geschenkkarte im Wert von CHF 100 ........... 7.50
+	[1163] MrLens Gutschein im Wert von CHF 20 .................... 7.49
+	[4253] MAGANDO.ch Geschenkkarte im Wert von CHF 20 ............ 7.49
+	[1268] FLEUROP Geschenkkarte im Wert von CHF 25 ............... 7.49
+	[1308] SHUI TANG Jahresabo im Wert von CHF 300 (Gutschein) .... 7.06
+	[1215] VICTORIA-JUNGFRAU COLLECTION Wertgutschein von CHF 100 . 7.06
+	[1307] SHUI TANG Gutschein im Wert von CHF 100 ................ 7.06
+	[1510] NAVYBOOT Gutschein im Wert von CHF 100 ................. 7.06
+	[1511] NAVYBOOT Gutschein im Wert von CHF 200 ................. 7.06
+	[1306] SHUI TANG Gutschein im Wert von CHF 50 ................. 7.05
+	[1509] NAVYBOOT Gutschein im Wert von CHF 50 .................. 7.05
+	[3555] TheBungalow.ch Gutschein im Wert von CHF 100 ........... 7.04
+	[3561] JEANS.CH Gutschein im Wert von CHF 200 ................. 6.76
+	[3567] SHIRTERY.CH Gutschein im Wert von CHF 200 .............. 6.76
+	[1504] TICKETCORNER Ski-Geschenkbox im Wert von CHF 100 ....... 6.67
+	[3553] TheBungalow.ch Gutschein im Wert von CHF 50 ............ 6.67
+	[3559] JEANS.CH Gutschein im Wert von CHF 100 ................. 6.58
+	[3565] SHIRTERY.CH Gutschein im Wert von CHF 100 .............. 6.58
+	[1329] SWISS.HOLIDAYCARD Geschenkkarte im Wert von CHF 299 .... 6.38
+	[1198] THE BODY SHOP Geschenkkarte im Wert von CHF 50 ......... 6.38
+	[4931] GLOBUS Geschenkkarte im Wert von CHF 200 ............... 6.35
+	[1516] iTUNES Geschenkkarte im Wert von CHF 100 ............... 6.35
+	[4929] GLOBUS Geschenkkarte im Wert von CHF 100 ............... 6.35
+	[4933] SWAROVSKI Geschenkkarte im Wert von CHF 100 ............ 6.35
+	[1197] JELMOLI Geschenkkarte im Wert von CHF 50 ............... 6.35
+	[1331] LA REDOUTE Geschenkkarte im Wert von CHF 50 ............ 6.35
+	[1332] HOTELPLAN Geschenkkarte im Wert von CHF 50 ............. 6.35
+	[1505] BELDONA Geschenkkarte im Wert von CHF 50 ............... 6.35
+	[1512] STARBUCKS Geschenkkarte im Wert von CHF 50 ............. 6.35
+	[1513] BLACKOUT Geschenkkarte im Wert von CHF 50 .............. 6.35
+	[1515] iTUNES Geschenkkarte im Wert von CHF 50 ................ 6.35
+	[4927] GLOBUS Geschenkkarte im Wert von CHF 50 ................ 6.35
+	[4938] LÜTHY BALMER STOCKER Geschenkkarte im Wert von CHF 50 .. 6.35
+	[4250] GIDOR COIFFURE Geschenkkarte im Wert von CHF 100 ....... 6.33
+	[4936] LÜTHY BALMER STOCKER Geschenkkarte im Wert von CHF 20 .. 6.33
+	[1093] ORELL FÜSSLI Geschenkkarte im Wert von CHF 50 .......... 6.31
+	[1092] ORELL FÜSSLI Geschenkkarte im Wert von CHF 20 .......... 6.31
+	[3557] JEANS.CH Gutschein im Wert von CHF 50 .................. 6.26
+	[3563] SHIRTERY.CH Gutschein im Wert von CHF 50 ............... 6.26
+	[1201] TICKETCORNER Geschenkkarte im Wert von CHF 100 ......... 6.18
+	[1196] IKEA Geschenkkarte im Wert von CHF 50 .................. 6.18
+	[1200] TICKETCORNER Geschenkkarte im Wert von CHF 50 .......... 6.18
+	[1199] TICKETCORNER Geschenkkarte im Wert von CHF 25 .......... 6.17
+	[4249] GIDOR COIFFURE Geschenkkarte im Wert von CHF 50 ........ 6.02
+	[1503] TICKETCORNER Ski-Geschenkbox im Wert von CHF 50 ........ 6.00
+	[3546] TheBungalow.ch Gutschein im Wert von CHF 20 ............ 5.71
+	[4247] GIDOR COIFFURE Geschenkkarte im Wert von CHF 20 ........ 5.26
 
 Troubleshooting
 ===============
