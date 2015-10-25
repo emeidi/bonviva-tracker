@@ -50,11 +50,14 @@ if len(files) < 1:
 	print "ERROR: No .json files found in directory '" + basePath + "'. Please run mirror.sh and parse.py first to mirror and parse the Bonviva web site."
 	sys.exit(1)
 
-filesSorted = sorted(files)
+filesSorted = sorted(files, reverse=True)
 #print filesSorted
 #sys.exit(0)
 
 mostRecentJSONDumpPath = filesSorted[0]
+
+d('Reading ' + mostRecentJSONDumpPath + ' ...')
+d('')
 
 f = open(mostRecentJSONDumpPath)
 jsonRaw = f.read()
@@ -62,6 +65,7 @@ f.close
 
 items = json.loads(jsonRaw)
 
+check = []
 list = []
 for item in items:
 	pattern = "CHF ([0-9]+)" # TODO: a more flexible approach
@@ -71,6 +75,12 @@ for item in items:
 		d(str(item['id']) + " with title '" + item['item'] + "' did not match pattern " + pattern + ". Skipping.")
 		continue
 		#return False
+	
+	if item['id'] in check:
+		d(str(item['id']) + " is a duplicate. Skipping.")
+		continue
+	
+	check.append(item['id'])
 	
 	chfvalue = int(match.group(1))
 	d("Item has a real price of " + str(chfvalue) + " CHF")
@@ -106,8 +116,8 @@ for item in itemsSorted:
 	kpointvaluePretty = round(item['kpointvalue'],2)
 	kpointvaluePretty = decimal_format.format(kpointvaluePretty)
 	
-	numSpacer = 75 - len(item['item'])
+	numSpacer = 55 - len(item['item'])
 	spacer = '.' * numSpacer
-	print item['item'] + ' ' + spacer + ' ' + str(kpointvaluePretty)
+	print '[' + str(item['id']) + '] ' + item['item'] + ' ' + spacer + ' ' + str(kpointvaluePretty)
 
 sys.exit(0)
